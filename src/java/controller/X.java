@@ -14,9 +14,12 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "X", urlPatterns = {"/X"})
 public class X extends HttpServlet {
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("Servlet X Get");
+        String name = request.getParameter("name");
+        System.out.println(name);
+        
+        response.getWriter().write("Hello");
     }
 }
