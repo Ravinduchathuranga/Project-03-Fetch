@@ -1,3 +1,3 @@
 function getRequest(){
-    alert("Hello World");
+    fetch("X");
 }
